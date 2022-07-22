@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Hotel</a></li>
+                <li><a href="quartos.html">Quartos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+            </ul>
+        </nav>
+
+        <div> pt | en | es </div>
+
+    </header>
+    <main>
+
+        <div style="text-align: center; padding-top: 2em">
+            <p>
+                <h1>Faça sua reserva</h1>
+        </div>
+
+        <form name="frCard" id="frCard" method="post" action="#">
+
+            <fieldset>
+
+                <legend>Dados Pessoais:</legend>
+                <label for="txUser"></label>
+
+                <p style="padding: .5em 0">Nome: <input style="padding-left: .5em; margin-left: 1.2em" type="text" name="txUser" id="txUser" placeholder="Digite seu nome" maxlength=""></p>
+
+                <p>Telefone: <input style="padding-left: .5em" type="text" name="txTel" id="txPass" placeholder="(11) 5555-5555"></p>
+
+                <p style="padding: .5em 0">CPF: <input style="padding-left: .5em; margin-left: 2em" type="text" name="txCpf" id="txCpf" placeholder="555.333.777-99"></p>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Acomodações:</legend>
+                <label for="chQc">Quarto Casal:</label><input style="margin-left: .5em" type="checkbox" name="chMaterMat" id="chMaterMat" value="casal">
+
+                <label style="padding-left: 1em" for="chMaterPor">Quarto Dual:</label><input style="margin-left: .5em" type="checkbox" name="chQd" id="chMaterPor" value="dual"> <!-- type checkbox serve para selecionar em box -->
+
+                <label style="padding-left: 1em" for="chMaterHis">Quarto Batman:</label><input style="margin-left: .5em" type="checkbox" name="chMaterHis" id="chMaterHis" value="batman">
+
+                <label style="padding-left: 1em" for="chMaterHis">Quarto Minions:</label><input style="margin-left: .5em" type="checkbox" name="chMaterHis" id="chMaterHis" value="minions">
+
+                <label style="padding-left: 1em" for="chMaterHis">Quarto Espaço:</label><input style="margin-left: .5em" type="checkbox" name="chMaterHis" id="chMaterHis" value="espaço">
+            </fieldset>
+            <fieldset>
+                <legend>Camas:</legend>
+                <label for="rdperiodoM">Cama Casal:</label><input style="margin-left: .5em" type="radio" name="rdPeriodo" id="rdPeriodoM" value="manha">
+                <label style="padding-left: 1em" for="rdperiodoT">Cama Casal + Cama Solteiro:</label><input style="margin-left: .5em" type="radio" name="rdPeriodo" id="rdPeriodoT" value="tarde"> <!-- type radio serve para selecionar, tipo bolinha -->
+                <label style="padding-left: 1em" for="rdperiodoN">Duas Camas de solteiro:</label><input style="margin-left: .5em" type="radio" name="rdPeriodo" id="rdPeriodoN" value="noite">
+                <!-- label serve para o computador fazer a leitura para a acessibilidade -->
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Check-in</legend>
+                <input type="date" name="prevData" id="prevData">
+
+                <legend>Check-out</legend>
+                <input type="date" name="prevData" id="prevData">
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Comentário</legend>
+                <textarea name="txComents" id="txComents" cols="40" rows="2" placeholder="Digite seu comentario..."></textarea>
+
+                <p style="padding-top:1em">
+                    <input type="submit" value="Enviar Orçamento..." onclick="capturaDados()"> <!-- Botão enviar -->
+
+                    <!-- <button type="button" onclick="capturaDados()">...</button> -->
+                </p>
+            </fieldset>
+
+        </form>
+
+        <script>
+            function capturaDados() {
+
+                var stConfirma = "<h2>Confirmação:</h2><p>dados recebidos com sucesso! Obrigado pela preferência.</p>";
+
+                var stNomeUser = document.forms['frCad']['txUser'].value;
+
+                var stNomeUser = document.getElementById("txUser").value;
+
+                var stPassUser =
+                    document.getElementById("txTel").value;
+
+
+                if (stNomeUser == "") {
+                    alert("ops! você deve digitar seu nome");
+                    document.getElementById("txUser").focus();
+                    return false;
+                }
+
+                if (stPassUser == "") {
+                    alert("ops! você deve digitar seu telefone");
+                    document.getElementById("txTel").focus();
+                    return false;
+                } else {
+                    document.write(stConfirma + "obrigado, " + stNomeUser + " " + "<p>");
+                    document.write("<a href='reserva.html'>voltar</a></p>");
+                }
+            }
+        </script>
+
+    </main>
+
+    <style>
+        form {
+            font-family: serif;
+            font-size: 12pt;
+            color: black;
+            margin-top: 2em;
+            margin-bottom: 4em;
+        }
+
+        fieldset {
+            margin: 1em auto;
+            width: 80%;
+            border: .1em solid white;
+            padding: 1em;
+        }
+
+        legend {
+            font-size: 16pt;
+            font-weight: 900;
+            margin-top: .6em;
+            padding: .5em .5em;
+            color: white;
+        }
+
+        #prevData {
+            font-size: 12pt;
+
+        }
+
+        label {
+            color: white
+        }
+    </style>
+</body>
+
+</html>

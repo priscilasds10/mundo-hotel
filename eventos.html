@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+
+<body>
+    <header>
+
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Hotel</a></li>
+                <li><a href="quartos.html">Quartos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+            </ul>
+        </nav>
+
+        <div> pt | en | es </div>
+
+    </header>
+    <main>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 6</div>
+                <img src="fotos/imgs_eventos/evento1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 6</div>
+                <img src="fotos/imgs_eventos/evento2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 6</div>
+                <img src="fotos/imgs_eventos/evento3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 6</div>
+                <img src="fotos/imgs_eventos/evento4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 6</div>
+                <img src="fotos/imgs_eventos/evento5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 6</div>
+                <img src="fotos/imgs_eventos/evento6.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+    </main>
+
+    <div class="Eventos" style="padding: 4em 0">
+        <h2>Sobre os Eventos</h2>
+        <p>
+            Aqui nós temos os melhores espaços para você fazer o seu evento. Desde palestra, confraternizações, festa de aniversário até casamentos.
+        </p>
+        <p>
+            Nós sabemos que um evento é muito importante para a pessoa que está organizando. E é por essa razão que nós do Mundo Hotel, fazemos nosso máximo para que de tudo certo no dia. O Mundo Hotel já foi palco de muitos eventos importantes, tais como palestras de médicos muito aclamados pelo mundo a fora. Aqui nós contamos com um espaço para palestras que comporta até 250 pessoas. O espaço contém "Data Show", que será de ajuda para o palestrante.</p>
+
+        <p style="padding-top: 3em">
+            <h2>Casamentos</h2>
+            <p>
+                Aqui nós amamos quando temos o prazer de realizar uma festa de casamento. Sabemos que é um dos, ou o dia mais importante dos noivos, e sem dúvida nenhuma não queremos estragar esse dia tão importante. Por isso prezamos muito para que esse dia saia exatamente como os noivos planejaram. Nós treinamos muito bem nossos funcionarios para que nao haja acidentes no dia. Aqui nós constamos com dois espaços para realizar a festa. Um deles comporta até 250 convidados, e o outro comporta 500 convidados. Ambos espaços contam com, DJ, Barmen, e Buffet. Caso queira alugar algum de nosso espaços, mande um email para nosso contato, e faremos oque for possivel para realizer seu sonho.
+            </p>
+
+    </div>
+
+    <footer>
+     
+        <text>
+         <br>
+            <p><a style="color: white;" href="tel:xx5555-5555">Telefone de Contato</a></p>
+            <p>política de privacidade</p>
+          
+        </text>
+    </footer>
+
+</body>
+
+</html>

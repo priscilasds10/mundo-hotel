@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gastronomia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Hotel</a></li>
+                <li><a href="quartos.html">Quartos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+            </ul>
+        </nav>
+
+        <div> pt | en | es </div>
+
+    </header>
+
+    <main style="border: none">
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 10</div>
+                <img src="fotos/comidas/comida1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 10</div>
+                <img src="fotos/comidas/comida2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 10</div>
+                <img src="fotos/comidas/comida3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 10</div>
+                <img src="fotos/comidas/comida4.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 10</div>
+                <img src="fotos/comidas/comida5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 10</div>
+                <img src="fotos/comidas/comida6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="fotos/comidas/comida7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="fotos/comidas/comida8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="fotos/comidas/comida9.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="fotos/comidas/comida10.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </main>
+
+    <div class="Eventos">
+        <p>
+            <h2>Gastronomia</h2>
+            <p>
+                O Mundo Hotel oferece refeições da gastronomia internacional, com grande variedade no cardápio. O restaurante do hotel, oferece buffet completo de saladas, pratos quentes e sobremesas, adega climatizada com mais de 80 rótulos de vinhos nacionais e importados. A versatilidade dos cardápios, a riqueza de detalhes e o impecável serviço cinco estrelas fazem da gastronomia um de seus diferenciais mais apreciados. Com 5 restaurantes à sua disposição, os hóspedes desfrutam de sabores diversos dos tradicionais temperos brasileiros.
+            </p>
+    </div>
+
+    <footer>
+      
+
+        <text>
+          
+            <p><a style="color: white;" href="tel:xx5555-5555">Telefone de Contato</a></p>
+            <P>política de privacidade</P>
+           
+        </text>
+    </footer>
+</body>
+
+</html>

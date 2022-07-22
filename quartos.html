@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quartos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slide.css">
+</head>
+
+<body>
+    <header>
+
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Hotel</a></li>
+                <li><a href="quartos.html">Quartos</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="gastronomia.html">Gastronomia</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+            </ul>
+        </nav>
+
+        <div> pt | en | es </div>
+
+    </header>
+    <main>
+
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="fotos/quartos/comum.jpg" style="width:100%">
+                <div class="text">Quarto Casal</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                <img src="fotos/quartos/comum_2.jpg" style="width:100%">
+                <div class="text">Quarto dual</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img src="fotos/quartos/batman.jpg" style="width:100%">
+                <div class="text">Quarto tematizado do Batman</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="fotos/quartos/minions.jpg" style="width:100%">
+                <div class="text">Quarto tematizado dos Minios</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="fotos/quartos/espaco.jpg" style="width:100%">
+                <div class="text">Quarto tematizado Espaço</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="fotos/quartos/transilvania.jpg" style="width:100%">
+                <div class="text">Quarto tematizado Transilvânia</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="fotos/quartos/quarto1.jpg" style="width:100%">
+                <div class="text">Suíte Casal</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="fotos/quartos/quarto2.jpg" style="width:100%">
+                <div class="text">Quarto Casal mais solteiro</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+    </main>
+
+    <div class="Eventos">
+        <p>
+            <h2>Sobre os Quartos</h2>
+            <p> Aqui no Mundo Hotel, você encontra as mais diversas variedades de quartos. No Mundo Hotel você tem a sua disposição quartos comuns, até quarto tematizados para os amantes de cinema, desenhos etc.</p>
+            <p>Você tera a sua disposição, serviço de quarto, camareira, e um funcionario para carregar as malas. O cliente terá a sua disposição trocas de roupas de cama, limpeza de quarto, e até café da manhã no quarto.</p>
+            <p>O Mundo Hotel, é o Hotel ideal para você e sua familia. Tragam seus pais, esposas e filhos e deixe a magia encantar vocês.</p>
+            <p>
+                Todos os quartos são equipados com os melhores confortos para seu bem. Os quartos casais, tem as camas "Queen Size", para um melhor conforto do acomodado. Também são equipados com Ar condicionado, Tv a cabo, frigobar e muito mais para que você tenha um ótimo descanso e aproveitamento.
+            </p>
+    </div>
+
+    <footer>
+       
+        <text>
+            <br>
+            <p><a style="color: white;" href="tel:xx5555-5555">Telefone de Contato</a></p>
+            <p>política de privacidade</p>
+        
+        </text>
+    </footer>
+</body>
+
+</html>
